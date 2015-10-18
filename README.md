@@ -1,7 +1,7 @@
-# JPA One to One Shared Primary Key Relationship Example with Spring Boot, Maven, and MySQL
+# JPA One to Many Relationship Example with Spring Boot, Maven, and MySQL
 
 ## Guide
-http://hellokoding.com/jpa-one-to-one-shared-primary-key-relationship-mapping-example-with-spring-boot-maven-and-mysql/
+http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/
 
 ## Prerequisites
 - JDK 1.8 or later
