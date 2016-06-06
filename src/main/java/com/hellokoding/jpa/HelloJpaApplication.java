@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.transaction.Transactional;
 import java.util.HashSet;
+import java.util.Set;
 
 @SpringBootApplication
 public class HelloJpaApplication implements CommandLineRunner {
@@ -28,17 +29,21 @@ public class HelloJpaApplication implements CommandLineRunner {
     @Transactional
     public void run(String... strings) throws Exception {
         // save a couple of categories
-        BookCategory categoryA = new BookCategory("Category A", new HashSet<Book>(){{
-            add(new Book("Book A1"));
-            add(new Book("Book A2"));
-            add(new Book("Book A3"));
-        }});
+        BookCategory categoryA = new BookCategory("Category A");
+        Set bookAs = new HashSet<Book>(){{
+            add(new Book("Book A1", categoryA));
+            add(new Book("Book A2", categoryA));
+            add(new Book("Book A3", categoryA));
+        }};
+        categoryA.setBooks(bookAs);
 
-        BookCategory categoryB = new BookCategory("Category B", new HashSet<Book>(){{
-            add(new Book("Book B1"));
-            add(new Book("Book B2"));
-            add(new Book("Book B3"));
-        }});
+        BookCategory categoryB = new BookCategory("Category B");
+        Set bookBs = new HashSet<Book>(){{
+            add(new Book("Book B1", categoryB));
+            add(new Book("Book B2", categoryB));
+            add(new Book("Book B3", categoryB));
+        }};
+        categoryB.setBooks(bookBs);
 
         bookCategoryRepository.save(new HashSet<BookCategory>() {{
             add(categoryA);

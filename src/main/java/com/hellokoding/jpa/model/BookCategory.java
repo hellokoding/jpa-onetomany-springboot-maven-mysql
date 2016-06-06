@@ -14,9 +14,8 @@ public class BookCategory {
 
     }
 
-    public BookCategory(String name, Set<Book> books) {
+    public BookCategory(String name) {
         this.name = name;
-        this.books = books;
     }
 
     @Id

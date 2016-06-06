@@ -16,6 +16,11 @@ public class Book{
         this.name = name;
     }
 
+    public Book(String name, BookCategory bookCategory) {
+        this.name = name;
+        this.bookCategory = bookCategory;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int getId() {
