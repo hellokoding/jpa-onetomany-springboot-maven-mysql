@@ -1,7 +1,7 @@
 # JPA One to Many Relationship Example with Spring Boot, Maven, and MySQL
 
 ## Guide
-http://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/
+https://hellokoding.com/jpa-one-to-many-relationship-mapping-example-with-spring-boot-maven-and-mysql/
 
 ## Prerequisites
 - JDK 1.8 or later
